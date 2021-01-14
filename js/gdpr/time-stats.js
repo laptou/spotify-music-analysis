@@ -1,3 +1,5 @@
+import { BASE_URL } from '../util.js';
+
 const MS_PER_HOUR = 60 * 60 * 1000;
 
 export class GdprTimeStats extends HTMLElement {
@@ -50,7 +52,7 @@ export class GdprTimeStats extends HTMLElement {
 
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
-    stylesheet.href = '/css/spotify-gdpr-time-stats.css';
+    stylesheet.href = new URL('css/spotify-gdpr-time-stats.css', BASE_URL).toString();
 
     this.shadowRoot.append(stylesheet, this.mainContainer);
   }
