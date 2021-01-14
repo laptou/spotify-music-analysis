@@ -13,10 +13,11 @@ import {showPicker} from '../file-upload/gdrive-picker.js';
 import './chart.js';
 import './table.js';
 import './time-stats.js';
+import {BASE_URL} from '../util.js';
 
 const {zip} = window;
 
-zip.workerScriptsPath = '/js/zip/';
+zip.workerScriptsPath = new URL('js/zip/', BASE_URL).toString();
 
 /** @type {import('./chart.js').GdprChart} */
 const chart = document.getElementById('gdpr-chart');

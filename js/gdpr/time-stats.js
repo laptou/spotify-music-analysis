@@ -1,4 +1,4 @@
-import { BASE_URL } from '../util.js';
+import {BASE_URL} from '../util.js';
 
 const MS_PER_HOUR = 60 * 60 * 1000;
 

@@ -1,4 +1,4 @@
-import { BASE_URL } from '../util.js';
+import {BASE_URL} from '../util.js';
 
 export class GdprTable extends HTMLElement {
   constructor() {
