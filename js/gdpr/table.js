@@ -20,7 +20,7 @@ export class GdprTable extends HTMLElement {
 
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
-    stylesheet.href = new URL('/css/spotify-gdpr-table.css', BASE_URL).toString();
+    stylesheet.href = new URL('css/spotify-gdpr-table.css', BASE_URL).toString();
 
     this.shadowRoot.append(stylesheet, this.table);
   }

@@ -38,7 +38,7 @@ export class GdprChart extends HTMLElement {
 
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
-    stylesheet.href = new URL('/css/spotify-gdpr-chart.css', BASE_URL).toString();
+    stylesheet.href = new URL('css/spotify-gdpr-chart.css', BASE_URL).toString();
 
     this.mainContainer.append(this.scrollContainer);
     this.mainContainer.append(this.tooltip);
