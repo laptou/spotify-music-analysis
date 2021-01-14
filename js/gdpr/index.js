@@ -9,7 +9,6 @@
 import {
   collateStreamingData, getStreamingData, getStreamingHistory,
 } from './analysis.js';
-import {showPicker} from '../file-upload/gdrive-picker.js';
 import './chart.js';
 import './table.js';
 import './time-stats.js';
@@ -51,16 +50,6 @@ btnUploadFile.addEventListener('click', async () => {
 
   const fileUpload = inputUpload.files.item(0);
   if (!fileUpload) return;
-
-  await processUpload(fileUpload);
-});
-
-const btnPickFile =
-  /** @type {HTMLButtonElement} */
-  (document.getElementById('btn-data-pick'));
-
-btnPickFile.addEventListener('click', async () => {
-  const fileUpload = await showPicker();
 
   await processUpload(fileUpload);
 });
