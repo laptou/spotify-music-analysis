@@ -1,3 +1,5 @@
+import { BASE_URL } from "../util";
+
 export class GdprTable extends HTMLElement {
   constructor() {
     super();
@@ -18,7 +20,7 @@ export class GdprTable extends HTMLElement {
 
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
-    stylesheet.href = '/css/spotify-gdpr-table.css';
+    stylesheet.href = new URL('/css/spotify-gdpr-table.css', BASE_URL).toString();
 
     this.shadowRoot.append(stylesheet, this.table);
   }

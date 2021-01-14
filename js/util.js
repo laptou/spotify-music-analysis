@@ -15,3 +15,13 @@ export async function sleep(ms) {
  * @type {'http://www.w3.org/2000/svg'}
  */
 export const SVG_NS = 'http://www.w3.org/2000/svg';
+
+export const BASE_URL = getBaseUrl();
+
+function getBaseUrl() {
+  const baseEl = document.querySelectorAll('base[href]')[0];
+
+  if (!baseEl) return 'https://laptou.github.io/spotify-music-analysis';
+
+  return baseEl.href;
+}

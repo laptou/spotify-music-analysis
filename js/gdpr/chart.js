@@ -1,4 +1,4 @@
-import {SVG_NS} from '../util.js';
+import {BASE_URL, SVG_NS} from '../util.js';
 
 const RUN_SCALE_X = 30;
 const RUN_SCALE_Y = 30;
@@ -38,7 +38,7 @@ export class GdprChart extends HTMLElement {
 
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
-    stylesheet.href = '/css/spotify-gdpr-chart.css';
+    stylesheet.href = new URL('/css/spotify-gdpr-chart.css', BASE_URL).toString();
 
     this.mainContainer.append(this.scrollContainer);
     this.mainContainer.append(this.tooltip);
